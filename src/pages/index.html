@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header
+      class="w-full h-[5rem] flex justify-center items-center bg-white fixed top-0 left-0 px-8 z-20"
+    >
+      <nav class="flex-1">
+        <div class="menu flex justify-end transition-all">
+          <!-- Toggle Menu Sidebar -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3 font-medium text-semi-purple">
+              <img src="../img/logo.svg" alt="logo" class="w-[3rem] h-[3rem]" />
+              <h4>
+                SMK Karya Ghuna <br />
+                Bhakti 2
+              </h4>
+            </div>
+            <i
+              class="fa-solid fa-bars-staggered text-blue-600 text-xl cursor-pointer ml-[3rem] btn-toggle-sidebar rotate-0 ease-out duration-200"
+            ></i>
+          </div>
+
+          <!-- User Profile -->
+          <div
+            class="user-profile flex-1 relative flex justify-end items-center gap-4 text-right"
+          >
+            <div>
+              <h4 class="font-medium text-md">Muhammad Raihan</h4>
+              <p class="text-sm">Software Engineer</p>
+            </div>
+            <img
+              src="https://dummyimage.com/300x300/000/fff&text=profile"
+              alt="user-profile"
+              class="rounded-full w-10 h-10 cursor-pointer"
+            />
+
+            <!-- Dropdown User Profile -->
+            <div
+              class="user-profile-dropdown w-[10rem] rounded-2xl shadow-sm bg-white absolute top-[4.5rem] right-0 py-4 pl-4 text-sm transition opacity-0 invisible"
+            >
+              <a class="flex items-center gap-3 mb-3" href="">
+                <i class="fa-regular fa-user text-green-500"></i>
+                <p>Profile</p>
+              </a>
+              <form method="POST" action="">
+                <!-- @csrf -->
+                <button class="flex items-center gap-3 b-none">
+                  <i
+                    class="fa-solid fa-arrow-right-from-bracket text-red-500"
+                  ></i>
+                  <p>Logout</p>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex w-full pb-20">
+      <div
+        class="sidebar bg-white fixed h-[100vh] w-[15rem] px-4 pt-24 pb-10 transition-all shadow-sm overflow-y-scroll overflow-x-hidden"
+      >
+        <ul class="menu flex flex-col gap-4">
+          <li class="flex items-center gap-5 font-medium p-2">
+            <span
+              class="iconify text-2xl"
+              data-icon="ic:round-dashboard"
+            ></span>
+            <h5 class="text-sm">Dashboard</h5>
+          </li>
+          <li class="btn-toggle-dropdown-sidebar p-2 cursor-pointer">
+            <!-- Menu -->
+            <div class="flex items-center justify-between font-medium">
+              <div class="flex items-center gap-5">
+                <span
+                  class="iconify text-2xl"
+                  data-icon="mdi:bag-checked"
+                ></span>
+                <h5 class="text-sm">Jobs</h5>
+              </div>
+
+              <span class="iconify" data-icon="ep:arrow-down-bold"></span>
+            </div>
+
+            <!-- Expand Menu -->
+            <ul
+              class="dropdown-sidebar-expand-menu flex flex-col gap-4 transition-all opacity-0 overflow-hidden pl-11 text-sm"
+            >
+              <li>Jobs List</li>
+              <li>Jobs Application</li>
+              <li>Apply Job</li>
+            </ul>
+          </li>
+          <li class="btn-toggle-dropdown-sidebar p-2 cursor-pointer">
+            <!-- Menu -->
+            <div class="flex items-center justify-between font-medium">
+              <div class="flex items-center gap-5">
+                <span class="iconify text-2xl" data-icon="ri:pages-fill"></span>
+                <h5 class="text-sm">Pages</h5>
+              </div>
+
+              <span class="iconify" data-icon="ep:arrow-down-bold"></span>
+            </div>
+
+            <!-- Expand Menu -->
+            <ul
+              class="dropdown-sidebar-expand-menu flex flex-col gap-4 transition-all opacity-0 overflow-hidden pl-11 text-sm"
+            >
+              <li>Jobs List</li>
+              <li>Jobs Application</li>
+              <li>Apply Job</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <section
+        class="content h-[100vh] w-full flex-1 grid grid-cols-6 gap-5 pt-28 max-w-7xl px-8 ml-[15rem]"
+      >
+        <div class="col-span-4 rounded-xl">
+          <div class="grid grid-cols-3 gap-6">
+            <div
+              class="dashboard-count-users transition-all flex items-center gap-5 bg-white shadow-sm p-4 rounded-xl"
+            >
+              <div
+                class="shape-icon w-14 h-14 p-2 bg-green-200 rounded-lg flex items-center justify-center"
+              >
+                <span
+                  class="iconify text-green-600"
+                  data-icon="fa6-solid:user-group"
+                ></span>
+              </div>
+              <div class="text-sm">
+                <h2 class="font-normal text-slate-600 mb-1">Murid Pendaftar</h2>
+                <p class="font-bold">1000</p>
+              </div>
+            </div>
+            <div
+              class="dashboard-count-users transition-all flex items-center gap-5 bg-white shadow-sm p-4 rounded-xl"
+            >
+              <div
+                class="shape-icon w-14 h-14 p-2 bg-pink-200 rounded-lg flex items-center justify-center"
+              >
+                <span
+                  class="iconify text-pink-600"
+                  data-icon="fa6-solid:user-group"
+                ></span>
+              </div>
+              <div class="text-sm">
+                <h2 class="font-normal text-slate-600 mb-1">Guru Pendaftar</h2>
+                <p class="font-bold">10</p>
+              </div>
+            </div>
+
+            <div
+              class="dashboard-count-users transition-all flex items-center gap-5 bg-white shadow-sm p-4 rounded-xl"
+            >
+              <div
+                class="shape-icon w-14 h-14 p-2 bg-yellow-200 rounded-lg flex items-center justify-center"
+              >
+                <span
+                  class="iconify text-yellow-600"
+                  data-icon="fa6-solid:user-group"
+                ></span>
+              </div>
+              <div class="text-sm">
+                <h2 class="font-normal text-slate-600 mb-1">Siswa</h2>
+                <p class="font-bold">1000</p>
+              </div>
+            </div>
+            <div
+              class="dashboard-count-users transition-all flex items-center gap-5 bg-white shadow-sm p-4 rounded-xl"
+            >
+              <div
+                class="shape-icon w-14 h-14 p-2 bg-purple-200 rounded-lg flex items-center justify-center"
+              >
+                <span
+                  class="iconify text-purple-500"
+                  data-icon="fa6-solid:user-group"
+                ></span>
+              </div>
+              <div class="text-sm">
+                <h2 class="font-normal text-slate-600 mb-1">Guru</h2>
+                <p class="font-bold">300</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-sm rounded-xl p-4 mt-8">
+            <h1>User Interface</h1>
+          </div>
+        </div>
+        <div
+          class="col-span-2 bg-white shadow-sm rounded-xl p-8 max-h-max h-max"
+        >
+          <div class="flex items-center justify-between gap-3">
+            <button
+              class="bg-pink-500 text-white py-2 px-4 text-xs rounded-lg flex-1"
+            >
+              Murid Pendaftar
+            </button>
+            <button
+              class="bg-purple-500 text-white py-2 px-4 text-xs rounded-lg flex-1"
+            >
+              Guru Pendaftar
+            </button>
+          </div>
+          <h2
+            class="font-semibold text-lg text-slate-700 border-b-2 pb-2 mb-8 mt-4"
+          >
+            Pendaftar Baru
+          </h2>
+          <ul>
+            <li
+              class="flex items-center pl-5 py-4 gap-4 border mt-4 rounded-xl"
+            >
+              <img
+                src="https://dummyimage.com/300x300/000/fff&text=profile"
+                alt="foto murid"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="flex flex-col gap-1">
+                <h5 class="font-semibold text-sm">Muhammad Raihan</h5>
+                <p class="text-xs">SMP 32 Kota Bekasi</p>
+                <p class="text-xs">2 Hours ago</p>
+              </div>
+            </li>
+
+            <li
+              class="flex items-center pl-5 py-4 gap-4 border mt-4 rounded-xl"
+            >
+              <img
+                src="https://dummyimage.com/300x300/000/fff&text=profile"
+                alt="foto murid"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="flex flex-col gap-1">
+                <h5 class="font-semibold text-sm">Muhammad Raihan</h5>
+                <p class="text-xs">SMP 32 Kota Bekasi</p>
+                <p class="text-xs">2 Hours ago</p>
+              </div>
+            </li>
+            <li
+              class="flex items-center pl-5 py-4 gap-4 border mt-4 rounded-xl"
+            >
+              <img
+                src="https://dummyimage.com/300x300/000/fff&text=profile"
+                alt="foto murid"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="flex flex-col gap-1">
+                <h5 class="font-semibold text-sm">Muhammad Raihan</h5>
+                <p class="text-xs">SMP 32 Kota Bekasi</p>
+                <p class="text-xs">2 Hours ago</p>
+              </div>
+            </li>
+            <li
+              class="flex items-center pl-5 py-4 gap-4 border mt-4 rounded-xl"
+            >
+              <img
+                src="https://dummyimage.com/300x300/000/fff&text=profile"
+                alt="foto murid"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="flex flex-col gap-1">
+                <h5 class="font-semibold text-sm">Muhammad Raihan</h5>
+                <p class="text-xs">SMP 32 Kota Bekasi</p>
+                <p class="text-xs">2 Hours ago</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/c48ba1b707.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="../js/dropdown.js"></script>
+  </body>
+</html>

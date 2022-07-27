@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  @apply bg-semi-grey;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 2rem;
+}
+
+/* For Firefox */
+.scroll {
+  overflow-y: scroll;
+  scrollbar-width: 4px;
+  scrollbar-color: #b94b4b;
+  scrollbar-base-color: #b94b4b;
+}
+
+.dropdown-sidebar-expand-menu li {
+  @apply relative before:absolute before:-left-5 before:top-1.5 before:w-2 before:h-2 before:rounded-full before:bg-slate-700;
+}
+
+.dashboard-count-users:hover {
+  @apply bg-semi-purple text-white;
+}
+
+.dashboard-count-users:hover .shape-icon {
+  @apply bg-blue-600 text-white;
+}
+
+.dashboard-count-users:hover .iconify,
+.dashboard-count-users:hover h2 {
+  @apply text-white;
+}
